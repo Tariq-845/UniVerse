@@ -27,7 +27,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
   '8000-tariq845-universe-h2qtzgq4fi1.ws-eu108.gitpod.io',
@@ -94,6 +94,12 @@ WSGI_APPLICATION = 'universe.wsgi.application'
 DATABASES = {
   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://universe-c670bf4af548.herokuapp.com/",
+    "https://8000-tariq845-universe-h2qtzgq4fi1.ws-eu108.gitpod.io",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

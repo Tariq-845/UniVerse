@@ -32,7 +32,6 @@ DEBUG = False
 ALLOWED_HOSTS = [
   '8000-tariq845-universe-h2qtzgq4fi1.ws-eu108.gitpod.io',
   '.herokuapp.com',
-  'https://universe-c670bf4af548.herokuapp.com/'
 ]
 
 

@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from event.views import my_event
+from event.views import Events
 
 urlpatterns = [
+    path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
-    path('events/', my_event, name='events')
+    path('events/', Events.as_view(), name='events')
 ]

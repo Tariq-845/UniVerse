@@ -32,6 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
   '8000-tariq845-universe-h2qtzgq4fi1.ws-eu108.gitpod.io',
   '.herokuapp.com',
+  '8000-ciaranbrain-universe-yvqyunyrnvv.ws-eu108.gitpod.io', 
 ]
 
 
@@ -50,7 +51,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'cloudinary',
+    'django_summernote',
     'event',
+    'user_profile',
 ]
 
 SITE_ID = 1
@@ -108,6 +111,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://universe-c670bf4af548.herokuapp.com/",
     "https://8000-tariq845-universe-h2qtzgq4fi1.ws-eu108.gitpod.io",
+    "https://8000-ciaranbrain-universe-yvqyunyrnvv.ws-eu108.gitpod.io",
 ]
 
 # Password validation

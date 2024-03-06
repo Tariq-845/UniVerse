@@ -21,5 +21,6 @@ from event.views import Events
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
-    path('events/', Events.as_view(), name='events')
+    path('events/', Events.as_view(), name='events'),
+    path('summernote/', include('django_summernote.urls')),
 ]

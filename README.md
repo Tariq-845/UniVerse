@@ -14,10 +14,10 @@ Site Owner's goal:
 To provide a platform to connect students from an online learning campus so as to encourage and foster better collaboration, communication and inclusivity.
 
 ## Contributors:
-Tariq Ebden
-Ciaran Brain
-Tasniim
-Aubin Koenigssohn
+Tariq Ebden,
+Ciaran Brain,
+Tasniim,
+Aubin Koenigssohn,
 Joel Joe
 
 ## Key Features 

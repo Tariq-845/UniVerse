@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from event.views import Events
+from home.views import index
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('events/', Events.as_view(), name='events'),
+    path('', include('home.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]

@@ -4,7 +4,7 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
           <!-- Logo Here -->
-          <a class="navbar-brand" href="#">UniVerse</a>
+          <a class="navbar-brand" href="{% url 'home' %}">UniVerse</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -13,10 +13,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav me-auto mb-2">
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="{% url 'events' %}">Home</a>
+                      <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Events</a>
+                      <a class="nav-link {% if request.path == events_url %}active{% endif %}" href="{% url 'events' %}">Events</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">About</a>

@@ -21,8 +21,9 @@ from home.views import index
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
+    path('user/', include('user_profile.urls')),
     path('admin/', admin.site.urls),
-    path('events/', Events.as_view(), name='events'),
+    path('events/', include('event.urls')),
     path('', include('home.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]

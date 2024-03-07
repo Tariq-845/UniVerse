@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 class Event(models.Model):
   name = models.CharField(max_length=200, unique=True)
-  slug = models.SlugField(null=True)
+  slug = models.SlugField(unique=True)
   description = models.TextField()
   event_organiser = models.ForeignKey(
     User,

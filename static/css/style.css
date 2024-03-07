@@ -5,6 +5,33 @@ body {
   font-family: var(--main-font);
 }
 
+/* Header styles */
+.navbar {
+  background-color: #15144d;
+}
+
+/* Logo styles */
+.navbar-brand {
+  font-size: 1.4em;
+  color: rgb(255, 255, 255);
+}
+
+/* Navigation items styles */
+.navbar-nav {
+  --bs-nav-link-color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+/* Active navigation item styles  */
+.navbar-nav .nav-link.active {
+  color: rgb(64, 208, 191);
+}
+
+/* Style nav bar to the right */
+.navbar-collapse {
+  flex-grow: 0;
+}
+
 footer {
   display: flex;
   flex-shrink: 0;

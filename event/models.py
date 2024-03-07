@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User 
+from django.core.validators import MaxValueValidator, MinValueValidator
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -16,7 +17,13 @@ class Event(models.Model):
   image = CloudinaryField('image', default='placeholder')
   date = models.DateTimeField(auto_now_add = True)
   location = models.CharField(max_length=200)
-  max_participants = models.IntegerField()
+  max_participants = models.IntegerField(
+    default=1,
+    validators=[
+      MaxValueValidator(200),
+      MinValueValidator(1)
+    ]
+  )
   date_upated = models.DateTimeField(auto_now = True)
   CHOICES = (
     ('test1', 'test1'),

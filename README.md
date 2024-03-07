@@ -71,6 +71,12 @@ Trello was used for project management. User stories were created on the Miro bo
 9. Miro
 10. Trello
 
+### Bugs and fixes
+
+
+### Entity Relationship Diagram
+
+
 ### Future Features and Modifications 
 
 

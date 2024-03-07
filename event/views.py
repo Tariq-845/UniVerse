@@ -11,11 +11,15 @@ class Events(generic.ListView):
 def event_detail(request, slug):
   queryset = Event.objects.all()
   event = get_object_or_404(queryset, slug=slug)
+  reviews = event.reviews.all().order_by("-date_posted")
+  review_count = event.reviews.all().count()
 
   return render(
     request,
     "events/event_detail.html",
     {
       "event": event,
+      "reviews": reviews,
+      "review_count": review_count,
     }
   )

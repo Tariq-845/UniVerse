@@ -65,3 +65,23 @@ def review_edit(request, slug, review_id):
         'There was an error updating your review'
       )
   return HttpResponseRedirect(reverse('event_detail', args=[slug]))
+
+def review_delete(request, slug, review_id):
+  queryset = Event.objects.all()
+  event = get_object_or_404(queryset, slug=slug)
+  review = get_object_or_404(Review, pk=review_id)
+
+  if review.author == request.user:
+    review.delete()
+    messages.add_message(
+      request,
+      messages.SUCESS,
+      'Your review has successfully been deleted!'
+    )
+  else:
+    messages.add_message(
+      request,
+      messages.ERROR,
+      'There was an error when attempting to delete your review'
+    )
+  return HttpResponseRedirect(reverse('event_detail', args=[slug]))

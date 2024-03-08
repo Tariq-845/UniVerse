@@ -32,8 +32,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
   '8000-tariq845-universe-h2qtzgq4fi1.ws-eu108.gitpod.io',
   '.herokuapp.com',
-  '8000-ciaranbrain-universe-yvqyunyrnvv.ws-eu108.gitpod.io', 
+  '8000-ciaranbrain-universe-66flyewhpkq.ws-eu108.gitpod.io', 
   '8000-joelezra-universe-tu1ypbnk9tw.ws-eu108.gitpod.io',
+
 ]
 
 

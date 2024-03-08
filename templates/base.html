@@ -6,6 +6,7 @@
 {% url 'home' as home_url %}
 {% url 'events' as events_url %}
 {% url 'user_profile' as user_profile_url %}
+{% url 'about' as about_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {% endblock  %}
-    <title>Project - {% block title  %}{% endblock  %}  </title>
+    <title>UniVerse - {% block title  %}{% endblock  %}  </title>
 </head>
 <body>
     {% include "includes/header.html" %}

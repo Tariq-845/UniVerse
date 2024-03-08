@@ -22,6 +22,7 @@ from home.views import index
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('user/', include('user_profile.urls')),
+    path('about/', include('about.urls')),
     path('admin/', admin.site.urls),
     path('events/', include('event.urls')),
     path('', include('home.urls')),

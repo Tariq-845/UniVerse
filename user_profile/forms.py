@@ -4,4 +4,4 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
   class Meta:
       model = UserProfile
-      fields = ['profile_image', 'user', 'firstname', 'lastname', 'events' ]
+      fields = ['profile_image', 'firstname', 'lastname', 'events' ]

@@ -201,3 +201,40 @@ h1 {
         display: none
     }
 }
+
+/* About  */
+
+.container .about-main {
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about {
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.about p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-title {
+  font-size: 2em;
+  color: #3498db;
+}
+
+.about-content {
+  max-width: auto;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.read-more {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+

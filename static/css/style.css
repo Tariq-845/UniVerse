@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-
 body {
   height: 100vh;
   display: flex;
@@ -8,42 +7,34 @@ body {
   font-family: "Roboto Mono";
   margin: none;
 }
-
 /* Header styles */
 .navbar {
-  background-color: #15144d;
+  background-color: #15144D;
 }
-
 /* Logo styles */
 .navbar-brand {
   font-size: 1.4em;
   color: rgb(255, 255, 255);
 }
-
 /* Navigation items styles */
 .navbar-nav {
   --bs-nav-link-color: rgb(255, 255, 255);
   font-size: 1.2em;
 }
-
 /* Active navigation item styles  */
 .navbar-nav .nav-link.active {
   color: rgb(64, 208, 191);
 }
-
 /* Style nav bar to the right */
 .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-toggler {
   color: white;
 }
-
 .navbar-toggler-icon {
   color: white;
 }
-
 footer {
   display: flex;
   flex-shrink: 0;
@@ -54,7 +45,6 @@ footer {
   background-color:#15144d;
   border-top: var(--border);
 }
-
 footer ul {
   list-style-type: none;
   display: flex;
@@ -64,18 +54,14 @@ footer ul {
   padding: 0;
   margin: 10px;
 }
-
 footer i {
   font-size: 160%;
   padding: 5%;
   color: white;
 }
-
 .title {
   color: red;
 }
-
-
 #hero {
     height: 600px;
     width: 100%;
@@ -86,45 +72,40 @@ footer i {
     flex-direction: column;
     justify-content: space-around;
 }
-
 #slogan {
     text-align: center;
     align-items: flex-end;
     display: inline-block;
     padding: 10px;
-    border: 2px solid #15144d;
+    border: 2px solid #15144D;
     border-radius: 5px;
     background: linear-gradient(45deg, rgba(228, 212, 196, 0.5), rgba(11, 165, 193, 0.5));
-    color: #0c0c0c;
+    color: #0C0C0C;
 }
-
 #slogan h3 {
     text-align: center;
 }
-
 .hero-text {
     z-index: 1;
 }
-
 .hero-text h1 {
-    border: 2px solid #6fa5c1;
+    border: 2px solid #6FA5C1;
     padding: 10px;
     border-radius: 5px;
-    color: #e4d4c4;
+    color: #E4D4C4;
     display: inline-block;
-    background: linear-gradient(45deg, #15144d, #34949c);
+    background: linear-gradient(45deg, #15144D, #34949C);
 }
-
 div h1 {
     text-align: center;
-    margin: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     font-family: "Roboto Mono";
+    margin-right: 0;
 }
-
 .features {
     text-align: center;
 }
-
 .details {
     display: flex;
     flex-direction: column;
@@ -134,107 +115,101 @@ div h1 {
     width: 50%;
     margin-top: 0;
 }
-
 .details h3 {
     font-size: 1.8em;
     font-weight: 700;
 }
-
 #top-div {
   margin-bottom: 5vh;
 }
-
 #middle-div {
     justify-content: flex-end;
     margin-bottom: 5vh
 }
-
 #bottom-div {
     margin-bottom: 5vh;
 }
-
-p {
+.landing {
     width: 75%;
     text-align: center;
     font-size: 1.3em;
 }
-
+.col {
+  padding: 0;
+  margin: 0;
+}
 #study, #hackathon, #seminar {
     height: 300px;
-    width: 450px;
+    width: auto;
+    max-width: 450px;
 }
-
 .btn {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #e4d4c4;
-    background-color: #0c0c2e;
+    color: #E4D4C4;
+    background-color: #0C0C2E;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     margin-top: 1.5vh;
 }
-
 .btn:hover {
-    background-color: #6fa5c1;
+    background-color: #6FA5C1;
 }
-
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
-
 .hero-text {
     text-align: center;
 }
-
 .hero-text h3 {
     display: inline-block;
     padding: 10px;
-    border: 2px solid #15144d;
+    border: 2px solid #15144D;
     border-radius: 5px;
     background: linear-gradient(45deg, rgba(228, 212, 196, 0.5), rgba(11, 165, 193, 0.5));
-    color: #0c0c0c;
+    color: #0C0C0C;
 }
-
-@media screen and (max-width:800px) { 
+#events{
+  margin: 5vh 0;
+  padding: 0;
+}
+#event-pic {
+  height: 250px;
+  width: auto;
+  max-width: 280px;
+}
+@media screen and (max-width:800px) {
     .small-screens {
         display: none
     }
 }
-
 /* About  */
-
 .container .about-main {
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
-
 .about {
   margin-bottom: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
-
 .about p {
   line-height: 1.6;
   margin-bottom: 15px;
 }
-
 .about-title {
   font-size: 2em;
-  color: #3498db;
+  color: #3498DB;
 }
-
 .about-content {
   max-width: auto;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-
 .read-more {
-  color: #3498db;
+  color: #3498DB;
   text-decoration: none;
   font-weight: bold;
 }
-

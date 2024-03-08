@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
 body {
   height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: var(--main-font);
+  font-family: "Roboto Mono";
+  margin: none;
 }
 
 /* Header styles */
@@ -69,4 +73,131 @@ footer i {
 
 .title {
   color: red;
+}
+
+
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../../static/images/heroimg.png") no-repeat center center/cover;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#slogan {
+    text-align: center;
+    align-items: flex-end;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #15144d;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgba(228, 212, 196, 0.5), rgba(11, 165, 193, 0.5));
+    color: #0c0c0c;
+}
+
+#slogan h3 {
+    text-align: center;
+}
+
+.hero-text {
+    z-index: 1;
+}
+
+.hero-text h1 {
+    border: 2px solid #6fa5c1;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e4d4c4;
+    display: inline-block;
+    background: linear-gradient(45deg, #15144d, #34949c);
+}
+
+div h1 {
+    text-align: center;
+    margin: 5vh;
+    font-family: "Roboto Mono";
+}
+
+.features {
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    margin-top: 0;
+}
+
+.details h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+#top-div {
+  margin-bottom: 5vh;
+}
+
+#middle-div {
+    justify-content: flex-end;
+    margin-bottom: 5vh
+}
+
+#bottom-div {
+    margin-bottom: 5vh;
+}
+
+p {
+    width: 75%;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+#study, #hackathon, #seminar {
+    height: 300px;
+    width: 450px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #e4d4c4;
+    background-color: #0c0c2e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5vh;
+}
+
+.btn:hover {
+    background-color: #6fa5c1;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h3 {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #15144d;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgba(228, 212, 196, 0.5), rgba(11, 165, 193, 0.5));
+    color: #0c0c0c;
+}
+
+@media screen and (max-width:800px) { 
+    .small-screens {
+        display: none
+    }
 }

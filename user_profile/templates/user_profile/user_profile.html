@@ -1,2 +1,15 @@
 {% extends "base.html" %}
-<h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+{% block content %}
+<div class="container mx-auto my-auto">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="title">User Profile</h1>
+      <form class="user" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Profile</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -14,9 +14,9 @@ class UserProfile(models.Model):
     username = models.CharField(max_length=50)
     
     def __str__(self):
-        return self.username
+        return self.user.username
     
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        UserProfile.objects.create(user=instance, username=instance.username)
+# @receiver(post_save, sender=User)
+# def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         UserProfile.objects.create(user=instance, username=instance.username)

@@ -63,6 +63,9 @@
           <div id="review{{ review.id }}">
             {{ review.body | linebreaks }}
           </div>
+          {% if user.is_authenticated and review.author == user %}
+          <button class="btn btn-secondary btn-edit" review_id="{{ review.id }}">Edit</button>
+          {% endif %}
           {% endfor %}
         </div>
       </div>
@@ -74,7 +77,7 @@
         <form id="reviewForm" method="post">
           {{ review_form | crispy }}
           {% csrf_token %}
-          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+          <button id="submitButton" type="submit" class="btn btn-primary btn-signup btn-lg">Submit</button>
         </form>
         {% else %}
         <p>Log in to leave a review </p>
@@ -83,19 +86,3 @@
     </div>
   </div>
   {% endblock %}
-
-  <!-- 
-  .masthead-image:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 90%;
-  height: 100%;
-  width: 150%;
-  background: #445261;
-  -webkit-transform: skew(15deg);
-  -moz-transform: skew(15deg);
-  transform: skew(15deg);
-  z-index: 100;
-}
- -->

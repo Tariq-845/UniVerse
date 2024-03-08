@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .models import Event, Review
 from .forms import ReviewForm
 
@@ -40,3 +41,27 @@ def event_detail(request, slug):
       "review_form": review_form,
     }
   )
+
+def review_edit(request, slug, review_id):
+  if request.method == "POST":
+    queryset = Event.objects.all()
+    event = get_object_or_404(queryset, slug=slug)
+    review = get_object_or_404(Review, pk=review_id)
+    review_form = ReviewForm(data=request.POST, instance=review)
+
+    if review_form.is_valid() and review.author == request.user:
+      review = review_form.save(commit=False)
+      review.event = event
+      review.save()
+      messages.add_message(
+        request,
+        messages.SUCCESS,
+        'Your review has been updated!'
+      )
+    else:
+      messages.add_message(
+        request,
+        messages.ERROR,
+        'There was an error updating your review'
+      )
+  return HttpResponseRedirect(reverse('event_detail', args=[slug]))

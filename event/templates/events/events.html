@@ -11,9 +11,9 @@
   </div>
   <div class="row">
     {% for event in event_list %}
-      <div class="col-4">
+      <div class="col-md-12 col-lg-6 text-center" id="events">
         {% if "placeholder" in event.image.url %}
-        <img src="{% static 'images/default.png' %}" alt="placeholder" class="scale">
+        <img src="{% static 'images/seminar.jpg' %}" alt="placeholder" class="scale" id="event-pic">
         {% else %}
         <img src="{{ event.image.url }}" alt="{{ event.name }}">
         {% endif %}
